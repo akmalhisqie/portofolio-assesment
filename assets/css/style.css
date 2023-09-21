@@ -1,0 +1,296 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  font-family: "Quicksand", sans-serif;
+  margin: 0;
+  background-color: #fff1dc;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  position: absolute;
+  background: #ffffff00;
+  top: 0;
+  left: 0;
+  padding: 0 100px;
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 3;
+}
+
+header .logo {
+  color: #3a98b9;
+  height: 60px;
+  line-height: 60px;
+  font-size: 24px;
+  float: left;
+  font-weight: bold;
+}
+
+header nav {
+  float: right;
+}
+
+header nav ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+header nav ul li {
+  list-style: none;
+}
+
+header nav ul li a {
+  color: rgb(83, 83, 83);
+  height: 60px;
+  line-height: 60px;
+  padding: 0 20px;
+  text-decoration: none;
+  display: block;
+}
+
+header nav ul li a:hover,
+header nav ul li a.active {
+  color: #ffffff;
+  background-color: #aaaaaa;
+}
+
+.menu-toggle {
+  color: rgb(94, 94, 94);
+  float: right;
+  line-height: 50px;
+  font-size: 24px;
+  cursor: pointer;
+  display: none;
+}
+
+table {
+  background-color: #3a98b9;
+  border-radius: 10px;
+  padding: 30px;
+}
+
+td {
+  color: white;
+}
+/* responsive */
+
+@media (max-width: 650px) {
+  header {
+    padding: 0 20px;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  header nav {
+    position: absolute;
+    width: 100%;
+    height: calc(100vh - 50px);
+    background: #333;
+    top: 50px;
+    left: -100%;
+    transition: 0.5s all;
+  }
+
+  header nav.active {
+    left: 0;
+  }
+
+  header nav ul {
+    display: block;
+    text-align: center;
+  }
+  header nav ul li a {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    color: rgb(255, 255, 255);
+  }
+
+  main {
+    max-width: 1200px;
+    width: 100%;
+    margin-inline: auto;
+    padding: 2rem 4rem;
+    flex: 1;
+    display: block;
+    align-items: center;
+  }
+
+  main .content {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    margin-top: 80px;
+  }
+
+  main .content .greeting-word {
+    flex: 1 1;
+  }
+
+  main .content .greeting-word .title {
+    font-size: 3.5rem;
+    margin-block: 1rem;
+  }
+
+  main .content .greeting-word p {
+    line-height: 1.7rem;
+    font-size: 1.2rem;
+  }
+
+  main .content .content-image {
+    flex: 1;
+    display: block;
+  }
+
+  .nav__link {
+    display: block;
+    position: static;
+    /* width: auto; */
+    /* margin-right: 20px; */
+    height: auto;
+    background-color: #e9edc9;
+    border-radius: 10px;
+  }
+
+  .nav__link a {
+    display: inline-block;
+  }
+
+  .hide {
+    display: none;
+  }
+}
+
+/* CSS Media End */
+/* ============================================================================================================= */
+
+main {
+  max-width: 1200px;
+  width: 100%;
+  margin-inline: auto;
+  padding: 2rem 4rem;
+  flex: 1;
+  display: block;
+  align-items: center;
+}
+
+main .content {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  margin-top: 80px;
+}
+
+main .content .greeting-word {
+  flex: 1 1;
+}
+
+main .content .greeting-word .title {
+  font-size: 3.5rem;
+  margin-block: 1rem;
+}
+
+main .content .greeting-word p {
+  line-height: 1.7rem;
+  font-size: 1.2rem;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+main .content .content-image {
+  flex: 1;
+  display: block;
+}
+
+article {
+  border-radius: 20px;
+  margin-top: 30px;
+  background: #3a98b9;
+  color: white;
+  padding: 10px 30px;
+  width: 78%;
+  text-align: justify;
+}
+
+.article-title {
+  margin-bottom: 5px;
+}
+
+.skill-list {
+  margin: 5px 0;
+  margin-top: 60px;
+  display: flex;
+  flex-direction: row;
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+.img-list {
+  height: 60px;
+  margin-right: 40px;
+  flex-grow: 1;
+}
+
+aside {
+  color: white;
+  flex-basis: 35%;
+  background-color: #3a98b9;
+  text-align: center;
+  border-radius: 20px;
+  padding: 20px;
+  height: fit-content;
+  position: fixed;
+  right: 50px;
+  bottom: 130px;
+}
+
+.profile-a {
+  width: 180px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 1080px) {
+  aside {
+    right: 80px;
+  }
+}
+
+@media (max-width: 1075px) {
+  main {
+    flex-direction: column;
+  }
+
+  aside {
+    position: unset;
+    right: 120px;
+    margin-top: 40px;
+    margin-right: 190px;
+  }
+
+  aside .content-image {
+    margin: auto;
+    min-width: 250px;
+    width: 250px;
+    height: fit-content;
+    border-radius: 40px;
+    margin-left: 40px;
+  }
+}
+
+footer {
+  background: #eeeeee;
+  color: black;
+  padding: 10px 0;
+  text-align: center;
+  font-size: 12px;
+}
